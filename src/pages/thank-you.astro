@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const calLink = "https://calendly.com/adsbyjer/30m?back=1";
+---
+
+<Layout
+  title="Thank You | Ads by Jer"
+  description="Thanks for reaching out. We'll be in touch shortly."
+>
+  <Header />
+
+  <main class="min-h-screen flex items-center justify-center">
+    <div class="container-tight text-center py-32">
+      <div class="animate-on-scroll">
+        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full border border-[var(--border-gold)] mb-8">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="var(--gold-500)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="animate-on-scroll stagger-1 text-4xl md:text-5xl">
+        Message <span class="gold-text">Received</span>
+      </h1>
+
+      <p class="animate-on-scroll stagger-2 mt-6 text-lg text-[var(--text-secondary)] max-w-md mx-auto">
+        We'll review your inquiry and get back to you within 24 hours.
+      </p>
+
+      <div class="animate-on-scroll stagger-3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href={calLink} target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Skip the Wait — Book a Call Now
+        </a>
+        <a href="/" class="btn-secondary">
+          Back to Home
+        </a>
+      </div>
+
+      <div class="animate-on-scroll stagger-4 mt-16">
+        <div class="gold-divider max-w-xs mx-auto mb-8"></div>
+        <h3 class="text-xl mb-4">What Happens Next</h3>
+        <div class="max-w-md mx-auto space-y-4 text-left">
+          <div class="flex items-start gap-3">
+            <span class="text-[var(--gold-500)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">01</span>
+            <p class="text-sm text-[var(--text-secondary)]">We review your inquiry and research your portfolio or company</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-[var(--gold-500)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">02</span>
+            <p class="text-sm text-[var(--text-secondary)]">We reach out to schedule a strategy call</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-[var(--gold-500)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">03</span>
+            <p class="text-sm text-[var(--text-secondary)]">On the call, we map out a growth plan tailored to your needs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,128 @@
+---
+const calLink = "https://calendly.com/adsbyjer/30m?back=1";
+
+const navLinks = [
+  { label: "Results", href: "#results" },
+  { label: "Services", href: "#services" },
+  { label: "Process", href: "#process" },
+];
+---
+
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="container-tight">
+    <nav class="flex items-center justify-between h-18 md:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 text-decoration-none group">
+        <span class="text-[var(--gold-500)] font-semibold tracking-[0.15em] text-xs uppercase font-[Inter,sans-serif] transition-colors duration-300 group-hover:text-[var(--gold-400)]">
+          Ads by Jer
+        </span>
+        <span class="hidden sm:inline-block w-px h-4 bg-[var(--border-primary)]"></span>
+        <span class="hidden sm:inline-block text-[var(--text-muted)] text-[0.7rem] tracking-[0.08em] uppercase font-[Inter,sans-serif]">
+          Venture Capital
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-[var(--text-secondary)] text-sm font-medium font-[Inter,sans-serif] hover:text-[var(--text-heading)] transition-colors duration-300 no-underline"
+          >
+            {link.label}
+          </a>
+        ))}
+        <a href={calLink} target="_blank" rel="noopener noreferrer" class="btn-primary !py-2.5 !px-5 !text-[0.8rem]">
+          Book a Call
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden flex flex-col gap-1.5 p-2 -mr-2 bg-transparent border-none cursor-pointer"
+        aria-label="Toggle menu"
+      >
+        <span class="block w-5 h-[1.5px] bg-[var(--text-secondary)] transition-all duration-300 origin-center" id="bar1"></span>
+        <span class="block w-5 h-[1.5px] bg-[var(--text-secondary)] transition-all duration-300" id="bar2"></span>
+        <span class="block w-5 h-[1.5px] bg-[var(--text-secondary)] transition-all duration-300 origin-center" id="bar3"></span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="md:hidden fixed inset-0 top-18 bg-[var(--bg-primary)]/98 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+    <div class="container-tight flex flex-col items-center justify-center gap-8 pt-20">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="mobile-nav-link text-[var(--text-heading)] text-xl font-medium font-[Inter,sans-serif] no-underline"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a href={calLink} target="_blank" rel="noopener noreferrer" class="btn-primary mt-4">
+        Book a Strategy Call
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Header scroll effect
+  const header = document.getElementById("site-header");
+  let lastScroll = 0;
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY > 40) {
+      header?.classList.add("bg-[#09090B]/90", "backdrop-blur-xl", "border-b", "border-[#27272A]/50");
+    } else {
+      header?.classList.remove("bg-[#09090B]/90", "backdrop-blur-xl", "border-b", "border-[#27272A]/50");
+    }
+
+    lastScroll = scrollY;
+  });
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const bar1 = document.getElementById("bar1");
+  const bar2 = document.getElementById("bar2");
+  const bar3 = document.getElementById("bar3");
+  let isOpen = false;
+
+  menuBtn?.addEventListener("click", () => {
+    isOpen = !isOpen;
+
+    if (isOpen) {
+      mobileMenu?.classList.remove("opacity-0", "pointer-events-none");
+      mobileMenu?.classList.add("opacity-100", "pointer-events-auto");
+      bar1?.style.setProperty("transform", "rotate(45deg) translate(2.5px, 2.5px)");
+      bar2?.style.setProperty("opacity", "0");
+      bar3?.style.setProperty("transform", "rotate(-45deg) translate(2.5px, -2.5px)");
+      document.body.style.overflow = "hidden";
+    } else {
+      mobileMenu?.classList.add("opacity-0", "pointer-events-none");
+      mobileMenu?.classList.remove("opacity-100", "pointer-events-auto");
+      bar1?.style.setProperty("transform", "none");
+      bar2?.style.setProperty("opacity", "1");
+      bar3?.style.setProperty("transform", "none");
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      isOpen = false;
+      mobileMenu?.classList.add("opacity-0", "pointer-events-none");
+      mobileMenu?.classList.remove("opacity-100", "pointer-events-auto");
+      bar1?.style.setProperty("transform", "none");
+      bar2?.style.setProperty("opacity", "1");
+      bar3?.style.setProperty("transform", "none");
+      document.body.style.overflow = "";
+    });
+  });
+</script>

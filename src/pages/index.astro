@@ -1,0 +1,507 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const calLink = "https://calendly.com/adsbyjer/30m?back=1";
+
+const metrics = [
+  { value: "$30M+", label: "Ad Spend Managed" },
+  { value: "3.8x", label: "Average ROAS" },
+  { value: "50+", label: "Companies Scaled" },
+  { value: "42%", label: "Avg CAC Reduction" },
+];
+
+const painPoints = [
+  {
+    number: "01",
+    title: "Junior Marketers Running Six-Figure Budgets",
+    description:
+      "Your portfolio companies hire cheap, hand them the ad accounts, and burn through cash with no strategy, no attribution, and no results.",
+  },
+  {
+    number: "02",
+    title: "Agency Roulette",
+    description:
+      "Cycling through agencies that overpromise, underdeliver, and lock founders into 12-month contracts while CAC climbs quarter over quarter.",
+  },
+  {
+    number: "03",
+    title: "No Attribution, No Accountability",
+    description:
+      "You're approving marketing budgets but can't tie a single dollar of ad spend to pipeline or revenue. Reporting is vanity metrics at best.",
+  },
+];
+
+const services = [
+  {
+    title: "Google Ads",
+    description:
+      "Search, Shopping, and Performance Max campaigns that capture high-intent demand at the moment your ICP is looking for a solution.",
+    accent: "Search & Capture",
+  },
+  {
+    title: "Meta & LinkedIn Ads",
+    description:
+      "Targeted campaigns across Meta and LinkedIn that put your portfolio companies in front of decision-makers — not just impressions.",
+    accent: "Target & Reach",
+  },
+  {
+    title: "Landing Pages",
+    description:
+      "Conversion-optimized pages built to turn paid traffic into pipeline. No template sites — custom builds for each company's ICP.",
+    accent: "Convert & Close",
+  },
+  {
+    title: "Growth Analytics",
+    description:
+      "Full-funnel attribution from click to closed-won. Reporting that connects ad spend to ARR so you can see exactly where the money goes.",
+    accent: "Measure & Scale",
+  },
+];
+
+const caseStudies = [
+  {
+    category: "B2B SaaS",
+    stage: "Series A",
+    headline: "52% CAC Reduction in 90 Days",
+    metrics: [
+      { value: "52%", label: "Lower CAC" },
+      { value: "3.4x", label: "Pipeline Growth" },
+      { value: "90", label: "Days to Results" },
+    ],
+    channel: "Google Ads + LinkedIn",
+    description:
+      "A Series A SaaS company was burning $80K/mo on ads with no pipeline attribution. We rebuilt their paid search strategy, launched LinkedIn for top-of-funnel, and cut CAC by more than half while tripling pipeline.",
+  },
+  {
+    category: "DTC / E-commerce",
+    stage: "Seed",
+    headline: "ROAS From 1.2x to 4.8x",
+    metrics: [
+      { value: "4.8x", label: "ROAS" },
+      { value: "280%", label: "Revenue Growth" },
+      { value: "$0", label: "Wasted Spend" },
+    ],
+    channel: "Meta Ads + Google Shopping",
+    description:
+      "A seed-stage DTC brand was barely breaking even on Meta. We restructured creative testing, built a Google Shopping engine, and scaled revenue 280% while maintaining profitable unit economics.",
+  },
+  {
+    category: "FinTech",
+    stage: "Series B",
+    headline: "185% More SQLs, 41% Lower Cost",
+    metrics: [
+      { value: "185%", label: "More SQLs" },
+      { value: "41%", label: "Lower Cost/SQL" },
+      { value: "6 wks", label: "To Impact" },
+    ],
+    channel: "Google Ads + Landing Pages",
+    description:
+      "A Series B FinTech needed to scale SQLs for an enterprise push. We built dedicated landing pages per persona, optimized their Google Ads for SQL volume, and delivered 185% more qualified leads at 41% lower cost.",
+  },
+];
+
+const steps = [
+  {
+    number: "01",
+    title: "Audit",
+    description:
+      "We analyze your portfolio company's current marketing — ad accounts, landing pages, conversion data, and attribution. You get a clear picture of what's working, what's not, and where the money's going.",
+  },
+  {
+    number: "02",
+    title: "Deploy",
+    description:
+      "We launch high-performance campaigns in 2 weeks, not 2 months. Google, Meta, LinkedIn — whatever channels fit the company's ICP and stage. No bloated onboarding. No wasted time.",
+  },
+  {
+    number: "03",
+    title: "Scale",
+    description:
+      "Optimize relentlessly based on revenue data, not vanity metrics. Transparent reporting to you and the founders. When something works, we scale it. When it doesn't, we kill it fast.",
+  },
+];
+---
+
+<Layout
+  title="Ads by Jer | Growth Marketing for Venture Capital"
+  description="Performance marketing for VC-backed companies. Turn ad spend into predictable revenue growth with proven paid media strategies."
+>
+  <Header />
+
+  <main>
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background layers -->
+      <div class="absolute inset-0 hero-grid-pattern"></div>
+      <div class="absolute inset-0 hero-radial"></div>
+      <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--bg-primary)] to-transparent"></div>
+
+      <div class="container-tight relative z-10 text-center py-32 md:py-40">
+        <div class="animate-on-scroll">
+          <p class="eyebrow mb-6">Growth Marketing for Venture Capital</p>
+        </div>
+
+        <h1 class="animate-on-scroll stagger-1 max-w-4xl mx-auto text-balance">
+          Turn Ad Spend Into Revenue.
+          <br />
+          <span class="gold-text">Predictably.</span>
+        </h1>
+
+        <p class="animate-on-scroll stagger-2 mt-6 text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed">
+          Performance marketing for VC-backed companies that need to hit
+          their next milestone — not experiment with another agency.
+        </p>
+
+        <div class="animate-on-scroll stagger-3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href={calLink} target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Book a Strategy Call
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#results" class="btn-secondary">
+            See Results
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         METRICS BAR
+    ═══════════════════════════════════════════ -->
+    <section class="border-y border-[var(--border-subtle)]" style="background: var(--bg-secondary);">
+      <div class="container-tight py-12 md:py-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+          {metrics.map((m, i) => (
+            <div class={`text-center animate-on-scroll stagger-${i + 1}`}>
+              <div class="metric-number gold-text">{m.value}</div>
+              <div class="metric-label mt-2">{m.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROBLEM
+    ═══════════════════════════════════════════ -->
+    <section class="section-padding">
+      <div class="container-tight">
+        <div class="max-w-3xl animate-on-scroll">
+          <p class="eyebrow mb-4">The Problem</p>
+          <h2 class="text-balance">
+            Your Portfolio Companies Are
+            <span class="gold-text">Bleeding Cash</span> on Marketing
+          </h2>
+          <p class="mt-4 text-[var(--text-secondary)] text-lg max-w-2xl">
+            You've seen it across the portfolio. The same patterns, the same waste, the same excuses.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          {painPoints.map((point, i) => (
+            <div class={`card animate-on-scroll stagger-${i + 1}`}>
+              <span class="text-[var(--gold-500)] text-sm font-semibold font-[Inter,sans-serif] tracking-wide">{point.number}</span>
+              <h3 class="mt-3 text-xl">{point.title}</h3>
+              <p class="mt-3 text-[var(--text-secondary)] text-sm leading-relaxed">{point.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SOLUTION
+    ═══════════════════════════════════════════ -->
+    <section class="section-padding border-y border-[var(--border-subtle)]" style="background: var(--bg-secondary);">
+      <div class="container-tight">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-on-scroll">
+            <p class="eyebrow mb-4">The Solution</p>
+            <h2 class="text-balance">
+              One Proven Partner.<br />
+              <span class="gold-text">Entire Portfolio.</span>
+            </h2>
+            <p class="mt-6 text-[var(--text-secondary)] text-lg leading-relaxed">
+              Deploy a fractional growth marketing team across your portfolio companies.
+              Full-funnel paid media, conversion-optimized landing pages, and
+              reporting that ties every dollar to revenue.
+            </p>
+            <a href={calLink} target="_blank" rel="noopener noreferrer" class="btn-primary mt-8 inline-flex">
+              Let's Talk
+            </a>
+          </div>
+
+          <div class="space-y-6">
+            <div class="animate-on-scroll stagger-1 flex items-start gap-4 p-5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-primary)]/50 hover:border-[var(--border-gold)] transition-all duration-300">
+              <div class="gold-dot mt-2 shrink-0"></div>
+              <div>
+                <h4 class="text-[var(--text-heading)] font-semibold text-base" style="font-family: Inter, sans-serif;">Deploy Across Portfolio</h4>
+                <p class="text-sm text-[var(--text-secondary)] mt-1">One partner, consistent results across multiple companies. No re-training, no re-onboarding.</p>
+              </div>
+            </div>
+
+            <div class="animate-on-scroll stagger-2 flex items-start gap-4 p-5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-primary)]/50 hover:border-[var(--border-gold)] transition-all duration-300">
+              <div class="gold-dot mt-2 shrink-0"></div>
+              <div>
+                <h4 class="text-[var(--text-heading)] font-semibold text-base" style="font-family: Inter, sans-serif;">Revenue-Tied Reporting</h4>
+                <p class="text-sm text-[var(--text-secondary)] mt-1">No vanity metrics. Every report connects spend to CAC, pipeline, and closed revenue.</p>
+              </div>
+            </div>
+
+            <div class="animate-on-scroll stagger-3 flex items-start gap-4 p-5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-primary)]/50 hover:border-[var(--border-gold)] transition-all duration-300">
+              <div class="gold-dot mt-2 shrink-0"></div>
+              <div>
+                <h4 class="text-[var(--text-heading)] font-semibold text-base" style="font-family: Inter, sans-serif;">Month-to-Month. No Lock-In.</h4>
+                <p class="text-sm text-[var(--text-secondary)] mt-1">Results speak. No 12-month contracts, no cancellation fees. Stay because it works.</p>
+              </div>
+            </div>
+
+            <div class="animate-on-scroll stagger-4 flex items-start gap-4 p-5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-primary)]/50 hover:border-[var(--border-gold)] transition-all duration-300">
+              <div class="gold-dot mt-2 shrink-0"></div>
+              <div>
+                <h4 class="text-[var(--text-heading)] font-semibold text-base" style="font-family: Inter, sans-serif;">2-Week Launch, Not 2 Months</h4>
+                <p class="text-sm text-[var(--text-secondary)] mt-1">Startups can't wait. We audit, strategize, and launch campaigns in 14 days flat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SERVICES
+    ═══════════════════════════════════════════ -->
+    <section id="services" class="section-padding">
+      <div class="container-tight">
+        <div class="text-center max-w-2xl mx-auto animate-on-scroll">
+          <p class="eyebrow mb-4">What We Do</p>
+          <h2 class="text-balance">
+            Full-Funnel Paid Media.<br />
+            <span class="gold-text">Built for Scale.</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-14">
+          {services.map((service, i) => (
+            <div class={`card animate-on-scroll stagger-${i + 1} group`}>
+              <span class="text-[var(--gold-500)] text-xs font-semibold tracking-[0.12em] uppercase font-[Inter,sans-serif]">{service.accent}</span>
+              <h3 class="mt-3">{service.title}</h3>
+              <p class="mt-3 text-[var(--text-secondary)] text-sm leading-relaxed">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         RESULTS / CASE STUDIES
+    ═══════════════════════════════════════════ -->
+    <section id="results" class="section-padding border-y border-[var(--border-subtle)]" style="background: var(--bg-secondary);">
+      <div class="container-tight">
+        <div class="text-center max-w-2xl mx-auto animate-on-scroll">
+          <p class="eyebrow mb-4">Results</p>
+          <h2 class="text-balance">
+            Numbers That Move the Needle
+          </h2>
+          <p class="mt-4 text-[var(--text-secondary)] text-lg">
+            Real outcomes from VC-backed companies we've scaled.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-14">
+          {caseStudies.map((study, i) => (
+            <div class={`animate-on-scroll stagger-${i + 1} bg-[var(--bg-primary)] border border-[var(--border-subtle)] rounded-xl overflow-hidden hover:border-[var(--border-gold)] transition-all duration-400`}>
+              <!-- Header -->
+              <div class="px-6 pt-6 pb-4">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-semibold text-[var(--gold-500)] tracking-wide font-[Inter,sans-serif]">{study.category}</span>
+                  <span class="text-[var(--text-muted)]">&middot;</span>
+                  <span class="text-xs text-[var(--text-muted)] font-[Inter,sans-serif]">{study.stage}</span>
+                </div>
+                <h3 class="mt-2 text-lg">{study.headline}</h3>
+              </div>
+
+              <!-- Metrics -->
+              <div class="grid grid-cols-3 border-y border-[var(--border-subtle)]">
+                {study.metrics.map((m) => (
+                  <div class="py-4 px-3 text-center">
+                    <div class="text-xl md:text-2xl font-bold text-[var(--text-heading)] font-[Inter,sans-serif]" style="font-variant-numeric: tabular-nums;">{m.value}</div>
+                    <div class="text-[0.65rem] text-[var(--text-muted)] uppercase tracking-wide font-medium font-[Inter,sans-serif] mt-1">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <!-- Description -->
+              <div class="px-6 py-5">
+                <p class="text-sm text-[var(--text-secondary)] leading-relaxed">{study.description}</p>
+                <div class="mt-3 flex items-center gap-1.5">
+                  <span class="gold-dot" style="width: 4px; height: 4px;"></span>
+                  <span class="text-xs text-[var(--text-muted)] font-[Inter,sans-serif]">{study.channel}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROCESS
+    ═══════════════════════════════════════════ -->
+    <section id="process" class="section-padding">
+      <div class="container-tight">
+        <div class="text-center max-w-2xl mx-auto animate-on-scroll">
+          <p class="eyebrow mb-4">How It Works</p>
+          <h2 class="text-balance">
+            Three Steps. <span class="gold-text">Zero Waste.</span>
+          </h2>
+          <p class="mt-4 text-[var(--text-secondary)] text-lg">
+            We move fast because your portfolio companies can't afford to wait.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
+          {steps.map((step, i) => (
+            <div class={`animate-on-scroll stagger-${i + 1} text-center md:text-left`}>
+              <div class="step-number">{step.number}</div>
+              <h3 class="mt-2">{step.title}</h3>
+              <p class="mt-3 text-[var(--text-secondary)] text-sm leading-relaxed">{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         WHO THIS IS FOR
+    ═══════════════════════════════════════════ -->
+    <section class="py-16 md:py-20 border-y border-[var(--border-subtle)]" style="background: var(--bg-secondary);">
+      <div class="container-tight">
+        <div class="animate-on-scroll text-center max-w-3xl mx-auto">
+          <p class="eyebrow mb-4">Who This Is For</p>
+          <h2 class="text-balance mb-8">
+            Built for the People Who Write the Checks
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+          {[
+            { title: "VC Partners", desc: "Who need portfolio companies to hit growth milestones before the next raise" },
+            { title: "Operating Partners", desc: "Who are tired of plugging the same marketing gaps across every company" },
+            { title: "Platform Teams", desc: "Looking for a reliable growth partner to deploy across the portfolio" },
+            { title: "Founders", desc: "With VC backing who need to prove product-market fit through paid channels" },
+          ].map((item, i) => (
+            <div class={`animate-on-scroll stagger-${i + 1} p-5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-primary)]/50 text-center`}>
+              <h4 class="text-[var(--text-heading)] font-semibold text-sm" style="font-family: Inter, sans-serif;">{item.title}</h4>
+              <p class="text-xs text-[var(--text-secondary)] mt-2 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FINAL CTA
+    ═══════════════════════════════════════════ -->
+    <section class="section-padding relative overflow-hidden">
+      <!-- Subtle background accent -->
+      <div class="absolute inset-0 hero-radial opacity-60"></div>
+
+      <div class="container-tight relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="animate-on-scroll">
+            <h2 class="text-balance">
+              Stop Burning Runway on Marketing<br />
+              <span class="gold-text">That Doesn't Work</span>
+            </h2>
+          </div>
+
+          <p class="animate-on-scroll stagger-1 mt-6 text-lg text-[var(--text-secondary)] max-w-xl mx-auto">
+            30 minutes. No pitch deck. Just a direct conversation about what's
+            working, what's not, and where the growth is.
+          </p>
+
+          <div class="animate-on-scroll stagger-2 mt-10">
+            <a href={calLink} target="_blank" rel="noopener noreferrer" class="btn-primary text-base !py-4 !px-8">
+              Book a Strategy Call
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <p class="animate-on-scroll stagger-3 mt-6 text-sm text-[var(--text-muted)]">
+            Or email directly:
+            <a href="mailto:jer@adsbyjer.com" class="text-[var(--gold-500)] hover:text-[var(--gold-400)] transition-colors no-underline">
+              jer@adsbyjer.com
+            </a>
+          </p>
+        </div>
+
+        <!-- Optional: Contact Form -->
+        <div class="animate-on-scroll mt-20 max-w-lg mx-auto">
+          <div class="gold-divider mb-12"></div>
+          <p class="text-center text-sm text-[var(--text-muted)] mb-6">Prefer async? Drop us a note.</p>
+
+          <form
+            name="vc-inquiry"
+            method="POST"
+            action="/thank-you"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            class="space-y-4"
+          >
+            <input type="hidden" name="form-name" value="vc-inquiry" />
+            <p class="hidden">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                class="form-input"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                class="form-input"
+              />
+            </div>
+
+            <input
+              type="text"
+              name="company"
+              placeholder="Firm / Company Name"
+              class="form-input"
+            />
+
+            <textarea
+              name="message"
+              placeholder="Tell us about your portfolio's growth challenges..."
+              rows="3"
+              class="form-input resize-none"
+            ></textarea>
+
+            <div class="text-center">
+              <button type="submit" class="btn-primary w-full sm:w-auto">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

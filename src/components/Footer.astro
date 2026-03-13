@@ -1,0 +1,61 @@
+---
+const calLink = "https://calendly.com/adsbyjer/30m?back=1";
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-[var(--border-subtle)]" style="background: var(--bg-primary);">
+  <div class="container-tight section-padding !pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+      <!-- Brand -->
+      <div>
+        <span class="text-[var(--gold-500)] font-semibold tracking-[0.15em] text-xs uppercase font-[Inter,sans-serif]">
+          Ads by Jer
+        </span>
+        <p class="mt-3 text-sm text-[var(--text-muted)] leading-relaxed max-w-xs">
+          Performance marketing for VC-backed companies that need to scale revenue, not just spend budget.
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-sm font-[Inter,sans-serif] font-semibold text-[var(--text-heading)] tracking-wide uppercase mb-4" style="font-family: Inter, sans-serif; font-size: 0.75rem; letter-spacing: 0.1em;">Contact</h4>
+        <div class="flex flex-col gap-2">
+          <a href="mailto:jer@adsbyjer.com" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-500)] transition-colors no-underline">
+            jer@adsbyjer.com
+          </a>
+          <a href="tel:+16509449904" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-500)] transition-colors no-underline">
+            (650) 944-9904
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-sm font-[Inter,sans-serif] font-semibold text-[var(--text-heading)] tracking-wide uppercase mb-4" style="font-family: Inter, sans-serif; font-size: 0.75rem; letter-spacing: 0.1em;">Quick Links</h4>
+        <div class="flex flex-col gap-2">
+          <a href="#results" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-500)] transition-colors no-underline">Results</a>
+          <a href="#services" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-500)] transition-colors no-underline">Services</a>
+          <a href="#process" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-500)] transition-colors no-underline">Process</a>
+          <a href={calLink} target="_blank" rel="noopener noreferrer" class="text-sm text-[var(--gold-500)] hover:text-[var(--gold-400)] transition-colors no-underline font-medium">
+            Book a Strategy Call &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-16 pt-6 border-t border-[var(--border-subtle)] flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-[var(--text-muted)]">
+        &copy; {currentYear} Ads by Jer. All rights reserved.
+      </p>
+      <div class="flex items-center gap-6">
+        <a href="https://adsbyjer.com" class="text-xs text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors no-underline">
+          adsbyjer.com
+        </a>
+        <a href="https://medspa.adsbyjer.com" class="text-xs text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors no-underline">
+          Med Spas
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
