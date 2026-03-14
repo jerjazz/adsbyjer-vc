@@ -1,18 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 
 const calLink = "https://calendly.com/adsbyjer/30m?back=1";
 ---
 
 <Layout
   title="Thank You | Ads by Jer"
-  description="Thanks for reaching out. We'll be in touch shortly."
+  description="Thanks for reaching out. We'll review your inquiry and get back within 24 hours."
 >
-  <Header />
-
-  <main class="min-h-screen flex items-center justify-center">
+  <div class="min-h-screen flex items-center justify-center">
     <div class="container-tight text-center py-32">
       <div class="animate-on-scroll">
         <div class="inline-flex items-center justify-center w-16 h-16 rounded-full border border-[var(--border-gold)] mb-8">
@@ -44,21 +40,19 @@ const calLink = "https://calendly.com/adsbyjer/30m?back=1";
         <h3 class="text-xl mb-4">What Happens Next</h3>
         <div class="max-w-md mx-auto space-y-4 text-left">
           <div class="flex items-start gap-3">
-            <span class="text-[var(--gold-600)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">01</span>
+            <span class="text-[var(--gold-600)] dark:text-[var(--gold-400)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">01</span>
             <p class="text-sm text-[var(--text-secondary)]">We review your inquiry and research your portfolio or company</p>
           </div>
           <div class="flex items-start gap-3">
-            <span class="text-[var(--gold-600)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">02</span>
+            <span class="text-[var(--gold-600)] dark:text-[var(--gold-400)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">02</span>
             <p class="text-sm text-[var(--text-secondary)]">We reach out to schedule a strategy call</p>
           </div>
           <div class="flex items-start gap-3">
-            <span class="text-[var(--gold-600)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">03</span>
-            <p class="text-sm text-[var(--text-secondary)]">On the call, we map out a growth plan tailored to your needs</p>
+            <span class="text-[var(--gold-600)] dark:text-[var(--gold-400)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">03</span>
+            <p class="text-sm text-[var(--text-secondary)]">On the call, we map out a growth plan tailored to your portfolio</p>
           </div>
         </div>
       </div>
     </div>
-  </main>
-
-  <Footer />
+  </div>
 </Layout>
