@@ -207,6 +207,25 @@
   .bg-surface-alt { background-color: var(--bg-secondary); }
   .bg-surface-raised { background-color: var(--bg-tertiary); }
 
+  /* Logo wordmarks */
+  .logo-wordmark {
+    font-family: "Inter", sans-serif;
+    color: var(--text-muted);
+    opacity: 0.55;
+    transition: opacity 0.3s ease;
+    user-select: none;
+    line-height: 1;
+  }
+  .logo-wordmark:hover {
+    opacity: 0.85;
+  }
+  .dark .logo-wordmark {
+    opacity: 0.4;
+  }
+  .dark .logo-wordmark:hover {
+    opacity: 0.7;
+  }
+
   /* Typography */
   .eyebrow {
     font-family: "Inter", sans-serif;
