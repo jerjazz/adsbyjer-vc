@@ -207,23 +207,34 @@
   .bg-surface-alt { background-color: var(--bg-secondary); }
   .bg-surface-raised { background-color: var(--bg-tertiary); }
 
-  /* Logo wordmarks */
+  /* Logo bar items */
+  .logo-item {
+    transition: opacity 0.3s ease;
+    opacity: 0.45;
+  }
+  .logo-item:hover {
+    opacity: 0.8;
+  }
+  .dark .logo-item {
+    opacity: 0.35;
+  }
+  .dark .logo-item:hover {
+    opacity: 0.7;
+  }
+
   .logo-wordmark {
     font-family: "Inter", sans-serif;
-    color: var(--text-muted);
-    opacity: 0.55;
-    transition: opacity 0.3s ease;
+    color: var(--text-heading);
     user-select: none;
     line-height: 1;
   }
-  .logo-wordmark:hover {
-    opacity: 0.85;
+
+  .logo-icon {
+    filter: none;
+    transition: filter 0.3s ease;
   }
-  .dark .logo-wordmark {
-    opacity: 0.4;
-  }
-  .dark .logo-wordmark:hover {
-    opacity: 0.7;
+  .dark .logo-icon {
+    filter: invert(1) brightness(0.85);
   }
 
   /* Typography */
