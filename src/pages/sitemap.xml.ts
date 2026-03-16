@@ -5,6 +5,7 @@ const site = 'https://vc.adsbyjer.com';
 const pages = [
   { url: '/', priority: 1.0, changefreq: 'weekly' },
   { url: '/thank-you/', priority: 0.3, changefreq: 'yearly' },
+  { url: '/audit-thank-you/', priority: 0.5, changefreq: 'yearly' },
 ];
 
 export const GET: APIRoute = () => {

@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const calLink = "https://calendly.com/adsbyjer/30m?back=1";
+const pdfUrl = "/portfolio-paid-media-audit.pdf";
+---
+
+<Layout
+  title="Your Audit Template Is Ready | Ads by Jer"
+  description="Download your Portfolio Paid Media Audit Template and start assessing your portfolio companies' paid media health."
+>
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="container-tight text-center py-32">
+      <div class="animate-on-scroll">
+        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full border border-[var(--border-gold)] mb-8">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3V15M12 15L7 10M12 15L17 10" stroke="var(--gold-500)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 19H20" stroke="var(--gold-500)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="animate-on-scroll stagger-1 text-4xl md:text-5xl">
+        Your Audit Template Is <span class="gold-text">Ready</span>
+      </h1>
+
+      <p class="animate-on-scroll stagger-2 mt-6 text-lg text-[var(--text-secondary)] max-w-md mx-auto">
+        Click below to download your Portfolio Paid Media Audit Template.
+      </p>
+
+      <div class="animate-on-scroll stagger-3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href={pdfUrl} download="Portfolio-Paid-Media-Audit-Template.pdf" class="btn-gold text-base !py-4 !px-8">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3V15M12 15L7 10M12 15L17 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 19H20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          Download PDF
+        </a>
+        <a href={calLink} target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Book a Strategy Call
+        </a>
+      </div>
+
+      <div class="animate-on-scroll stagger-4 mt-16">
+        <div class="gold-divider max-w-xs mx-auto mb-8"></div>
+        <h3 class="text-xl mb-4">How to Use This Template</h3>
+        <div class="max-w-md mx-auto space-y-4 text-left">
+          <div class="flex items-start gap-3">
+            <span class="text-[var(--gold-600)] dark:text-[var(--gold-400)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">01</span>
+            <p class="text-sm text-[var(--text-secondary)]">Score each portfolio company 1-5 across all 10 diagnostic areas</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-[var(--gold-600)] dark:text-[var(--gold-400)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">02</span>
+            <p class="text-sm text-[var(--text-secondary)]">Any company scoring below 25 needs immediate paid media intervention</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-[var(--gold-600)] dark:text-[var(--gold-400)] font-semibold text-sm font-[Inter,sans-serif] mt-0.5">03</span>
+            <p class="text-sm text-[var(--text-secondary)]">Book a 15-minute call to walk through your results and identify quick wins</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="animate-on-scroll stagger-5 mt-10 text-sm text-[var(--text-muted)]">
+        Questions? Email us at
+        <a href="mailto:jer@adsbyjer.com" class="transition-colors no-underline" style="color: var(--gold-500);">
+          jer@adsbyjer.com
+        </a>
+      </p>
+    </div>
+  </div>
+</Layout>

@@ -515,6 +515,98 @@ const pageSchema = {
   </section>
 
   <!-- ═══════════════════════════════════════════
+       FREE AUDIT TEMPLATE — FORM-GATED DOWNLOAD
+  ═══════════════════════════════════════════ -->
+  <section class="section-padding-sm border-t border-[var(--border-primary)]" style="background: var(--bg-primary);" aria-label="Free audit template download">
+    <div class="container-tight">
+      <div class="max-w-3xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
+          <!-- Left: Value Prop -->
+          <div class="animate-on-scroll">
+            <p class="eyebrow mb-4">Free Resource</p>
+            <h2 class="text-balance text-2xl md:text-3xl">
+              Portfolio Paid Media
+              <span class="gold-text">Audit Template</span>
+            </h2>
+            <p class="mt-4 text-[var(--text-secondary)] text-sm leading-relaxed">
+              10 diagnostic questions to assess any portfolio company's paid media health in under 15 minutes. Score each company, identify gaps, and know exactly where to intervene.
+            </p>
+            <ul class="mt-5 space-y-2.5">
+              {[
+                "10 diagnostic questions with scoring criteria",
+                "Instant health check for any portfolio company",
+                "Used by operating partners at top-tier funds",
+              ].map(item => (
+                <li class="flex items-start gap-2.5 text-sm text-[var(--text-secondary)]">
+                  <svg class="w-4 h-4 mt-0.5 shrink-0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5 4.5L6.5 11.5L2.5 7.5" stroke="var(--gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="animate-on-scroll stagger-1">
+            <div class="p-6 md:p-8 rounded-xl border border-[var(--border-primary)] bg-[var(--bg-secondary)]" style="box-shadow: var(--card-shadow);">
+              <p class="text-center text-sm font-semibold text-[var(--text-heading)] font-[Inter,sans-serif] mb-1">
+                Get the Free Audit Template
+              </p>
+              <p class="text-center text-xs text-[var(--text-muted)] mb-5">
+                Delivered instantly to your inbox as a PDF.
+              </p>
+
+              <form
+                name="audit-download"
+                method="POST"
+                action="/audit-thank-you"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                class="space-y-3"
+              >
+                <input type="hidden" name="form-name" value="audit-download" />
+                <p class="hidden">
+                  <label>Don't fill this out: <input name="bot-field" /></label>
+                </p>
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  class="form-input"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Work Email"
+                  required
+                  class="form-input"
+                />
+                <input
+                  type="text"
+                  name="firm"
+                  placeholder="Fund / Firm Name"
+                  class="form-input"
+                />
+
+                <button type="submit" class="btn-primary w-full !mt-4">
+                  Download the Audit Template
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 3V11M8 11L4.5 7.5M8 11L11.5 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 13H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        FAQ — with structured data for SEO/AEO
   ═══════════════════════════════════════════ -->
   <section id="faq" class="section-padding border-t border-[var(--border-primary)]" style="background: var(--bg-secondary);" aria-label="Frequently asked questions">
