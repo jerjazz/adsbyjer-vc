@@ -1,0 +1,30 @@
+<!--
+  Hidden page for Netlify form detection.
+  Netlify's post-processor scans static HTML for data-netlify="true" forms.
+  Astro-rendered HTML sometimes isn't detected, so this file ensures
+  both forms are registered during deploy.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Form Detection</title></head>
+<body>
+  <!-- Audit Download Form -->
+  <form name="audit-download" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="audit-download" />
+    <input name="bot-field" />
+    <input name="name" />
+    <input name="email" />
+    <input name="firm" />
+  </form>
+
+  <!-- VC Inquiry Form -->
+  <form name="vc-inquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="vc-inquiry" />
+    <input name="bot-field" />
+    <input name="name" />
+    <input name="email" />
+    <input name="company" />
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>
