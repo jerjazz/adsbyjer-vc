@@ -64,6 +64,13 @@ const orgSchema = {
     <link rel="canonical" href={canonicalUrl} />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
+    <!-- AEO/GEO Signals -->
+    <meta name="author" content="Jer Chung, Ads by Jer" />
+    <meta name="geo.region" content="US" />
+    <meta name="geo.placename" content="United States" />
+    <link rel="alternate" hreflang="en-US" href={canonicalUrl} />
+    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={fullTitle} />
@@ -71,11 +78,13 @@ const orgSchema = {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="Ads by Jer – VC Growth Marketing" />
     <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="Jer Chung" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:creator" content="@adsbyjer" />
 
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(schema || orgSchema)} />

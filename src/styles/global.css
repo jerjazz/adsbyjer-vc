@@ -246,6 +246,11 @@
     text-transform: uppercase;
     color: var(--gold-600);
   }
+  /* Compensate for letter-spacing visual offset on centered eyebrows */
+  .eyebrow-centered {
+    text-align: center;
+    padding-left: 0.15em;
+  }
   .dark .eyebrow { color: var(--gold-400); }
 
   .gold-text {

@@ -167,9 +167,17 @@ const faqItems = [
     question: "Can you work alongside existing marketing teams?",
     answer: "Absolutely. We frequently augment in-house marketers who are strong on brand and content but need paid media expertise. We integrate with their tools, join their standups, and function as an extension of their team — not a competing silo.",
   },
+  {
+    question: "What is a paid media audit for VC portfolio companies?",
+    answer: "A paid media audit is a diagnostic review of a portfolio company's ad accounts, attribution stack, landing pages, and budget allocation. We assess 10 key areas — from CAC trends to creative testing velocity — and score each on a 1-5 scale. Companies scoring below 25 out of 50 typically have critical gaps that are burning cash. The audit takes 2 weeks and produces an actionable roadmap, not a generic slide deck.",
+  },
+  {
+    question: "How much does it cost to hire a fractional growth marketing team for startups?",
+    answer: "Our portfolio engagements start at $5K-$15K per company per month depending on the scope and number of channels. The cost is typically 30-50% less than hiring a full-time growth marketer, and you get a senior team rather than a single junior hire. Most portfolio discounts apply when engaging 3+ companies. We're month-to-month with no setup fees after the initial 90-day onboarding period.",
+  },
 ];
 
-/* ── Schema ── */
+/* ── Schema — Enhanced for SEO/AEO/GEO ── */
 
 const siteUrl = "https://vc.adsbyjer.com";
 
@@ -177,29 +185,100 @@ const pageSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": siteUrl,
       "name": "Ads by Jer – VC Growth Marketing",
-      "description": "Performance marketing for VC-backed companies. We deploy proven paid media strategies across portfolios — $30M+ managed, 42% avg CAC reduction, month-to-month.",
+      "description": "Performance marketing partner for venture capital and private equity firms. Portfolio-wide paid media management with $30M+ managed and 42% avg CAC reduction.",
+      "publisher": { "@id": `${siteUrl}/#organization` },
+      "inLanguage": "en-US",
+    },
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      "name": "Ads by Jer",
+      "alternateName": "Ads by Jer – VC Growth Marketing",
+      "url": siteUrl,
+      "logo": `${siteUrl}/favicon.svg`,
+      "email": "jer@adsbyjer.com",
+      "telephone": "+16509449904",
+      "description": "Fractional growth marketing team for venture capital portfolios. We deploy proven paid media strategies across portfolio companies — Google Ads, Meta Ads, LinkedIn Ads, landing page optimization, and full-funnel attribution.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "knowsAbout": [
+        "VC Portfolio Marketing",
+        "Startup Growth Marketing",
+        "Customer Acquisition Cost Optimization",
+        "B2B SaaS Paid Media",
+        "DTC Performance Marketing",
+        "FinTech Growth Strategy",
+        "Portfolio Company Scaling",
+        "Performance Marketing for Venture Capital",
+        "Private Equity Value Creation",
+        "Paid Media Audits for Investors"
+      ],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}/#service`,
+      "name": "Ads by Jer – Portfolio Paid Media Management",
+      "provider": { "@id": `${siteUrl}/#organization` },
       "url": siteUrl,
       "telephone": "+16509449904",
       "email": "jer@adsbyjer.com",
       "areaServed": "US",
       "serviceType": [
-        "Paid Media for VC Portfolio Companies",
-        "Google Ads Management",
-        "Meta Ads Management",
-        "LinkedIn Ads Management",
-        "Landing Page Optimization",
-        "Growth Analytics & Attribution"
+        "Paid Media Management for VC Portfolio Companies",
+        "Google Ads Management for Startups",
+        "Meta Ads Management for Startups",
+        "LinkedIn Ads Management for B2B SaaS",
+        "Landing Page Design and Optimization",
+        "Growth Analytics and Revenue Attribution",
+        "Portfolio-Wide Marketing Strategy",
+        "Fractional CMO for VC-Backed Companies"
       ],
-      "knowsAbout": [
-        "VC Portfolio Marketing",
-        "Startup Growth Marketing",
-        "CAC Optimization",
-        "B2B SaaS Paid Media",
-        "Portfolio Company Scaling",
-        "Performance Marketing for Venture Capital"
-      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Growth Marketing Services",
+        "itemListElement": services.map((s, i) => ({
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": s.title,
+            "description": s.description,
+          },
+          "position": i + 1,
+        }))
+      },
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#webpage`,
+      "url": siteUrl,
+      "name": "VC Growth Marketing – Paid Media for Portfolio Companies | Ads by Jer",
+      "isPartOf": { "@id": `${siteUrl}/#website` },
+      "about": { "@id": `${siteUrl}/#service` },
+      "description": "Performance marketing partner for venture capital and private equity firms. Deploy proven paid media strategies across your portfolio — $30M+ managed, 42% average CAC reduction, month-to-month engagements.",
+      "breadcrumb": { "@id": `${siteUrl}/#breadcrumb` },
+      "inLanguage": "en-US",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["#hero-heading", "#hero-subheading", ".faq-trigger", ".faq-answer"]
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/#breadcrumb`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": siteUrl
+        }
+      ]
     },
     {
       "@type": "FAQPage",
@@ -217,8 +296,8 @@ const pageSchema = {
 ---
 
 <Layout
-  title="Ads by Jer | Growth Marketing for Venture Capital & Private Equity"
-  description="Performance marketing for VC-backed companies. We deploy proven paid media strategies across portfolios — $30M+ managed, 42% avg CAC reduction, month-to-month."
+  title="Paid Media for VC Portfolio Companies — $30M+ Managed, 42% Avg CAC Reduction | Ads by Jer"
+  description="Fractional growth marketing for venture capital & private equity portfolios. Google Ads, Meta Ads, LinkedIn — deployed across your portfolio companies. $30M+ managed, 42% avg CAC reduction, month-to-month."
   schema={pageSchema}
 >
   <!-- ═══════════════════════════════════════════
@@ -230,15 +309,15 @@ const pageSchema = {
 
     <div class="container-tight relative z-10 text-center py-40 md:py-48">
       <div class="animate-on-scroll">
-        <p class="eyebrow mb-6">Portfolio Growth Marketing</p>
+        <p class="eyebrow eyebrow-centered mb-6">Portfolio Growth Marketing</p>
       </div>
 
-      <h1 class="animate-on-scroll stagger-1 max-w-4xl mx-auto text-balance">
+      <h1 id="hero-heading" class="animate-on-scroll stagger-1 max-w-4xl mx-auto text-balance">
         Your Portfolio Companies Are Overspending on
         <span class="gold-text">Paid Media</span>
       </h1>
 
-      <p class="animate-on-scroll stagger-2 mt-8 text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed">
+      <p id="hero-subheading" class="animate-on-scroll stagger-2 mt-8 text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed">
         We deploy proven paid media strategies across VC portfolios.
         <strong class="text-[var(--text-heading)] font-semibold">$30M+ managed. 42% avg CAC reduction. Month-to-month.</strong>
       </p>
@@ -258,9 +337,57 @@ const pageSchema = {
   </section>
 
   <!-- ═══════════════════════════════════════════
+       SOCIAL PROOF — LOGO BAR (moved above metrics for prominence)
+  ═══════════════════════════════════════════ -->
+  <section class="py-10 md:py-12 border-t border-[var(--border-primary)]" style="background: var(--bg-secondary);" aria-label="Trusted by leading companies">
+    <div class="container-tight">
+      <p class="text-center text-[0.7rem] font-medium tracking-[0.18em] uppercase mb-8 text-[var(--text-muted)] font-[Inter,sans-serif]">
+        Trusted by teams at
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-x-12 lg:gap-x-14">
+        <!-- DoorDash -->
+        <div class="logo-item flex items-center gap-2">
+          <img src="/logos/doordash.svg" alt="DoorDash logo" class="logo-icon h-5 w-5" loading="lazy" />
+          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-bold tracking-[-0.03em]">DoorDash</span>
+        </div>
+        <!-- Lyft -->
+        <div class="logo-item flex items-center gap-2">
+          <img src="/logos/lyft.svg" alt="Lyft logo" class="logo-icon h-5 w-5" loading="lazy" />
+          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-bold tracking-[-0.02em]">Lyft</span>
+        </div>
+        <!-- Postmates -->
+        <div class="logo-item flex items-center gap-2">
+          <img src="/logos/postmates.svg" alt="Postmates logo" class="logo-icon h-5 w-5" loading="lazy" />
+          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-bold tracking-[-0.03em]">Postmates</span>
+        </div>
+        <!-- Harvey.ai -->
+        <div class="logo-item flex items-center gap-2">
+          <img src="/logos/harvey.svg" alt="Harvey.ai logo" class="logo-icon h-5 w-5" loading="lazy" />
+          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.01em]">Harvey</span>
+        </div>
+        <!-- Contentful -->
+        <div class="logo-item flex items-center gap-2">
+          <img src="/logos/contentful.svg" alt="Contentful logo" class="logo-icon h-5 w-5" loading="lazy" />
+          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.01em]">Contentful</span>
+        </div>
+        <!-- Culture Amp -->
+        <div class="logo-item flex items-center gap-2">
+          <img src="/logos/cultureamp.svg" alt="Culture Amp logo" class="logo-icon h-5 w-5" loading="lazy" />
+          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.02em]">Culture Amp</span>
+        </div>
+        <!-- Pebl -->
+        <div class="logo-item flex items-center gap-2">
+          <img src="/logos/pebl.svg" alt="Pebl logo" class="logo-icon h-5 w-5" loading="lazy" />
+          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.01em]">Pebl</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        METRICS BAR
   ═══════════════════════════════════════════ -->
-  <section class="border-y border-[var(--border-primary)]" style="background: var(--bg-secondary);" aria-label="Key metrics">
+  <section class="border-b border-[var(--border-primary)]" style="background: var(--bg-secondary);" aria-label="Key metrics">
     <div class="container-tight py-14 md:py-18">
       <dl class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0">
         {metrics.map((m, i) => (
@@ -270,52 +397,6 @@ const pageSchema = {
           </div>
         ))}
       </dl>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       SOCIAL PROOF — LOGO BAR
-  ═══════════════════════════════════════════ -->
-  <section class="py-16 md:py-20 overflow-hidden" style="background: var(--bg-primary);" aria-label="Trusted by leading companies">
-    <div class="container-tight">
-      <p class="text-center text-xs font-medium tracking-[0.15em] uppercase mb-10 text-[var(--text-muted)] font-[Inter,sans-serif]">
-        We've driven growth for teams at
-      </p>
-      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8 md:gap-x-14 lg:gap-x-16">
-        <!-- DoorDash -->
-        <div class="logo-item flex items-center gap-2.5">
-          <img src="/logos/doordash.svg" alt="" class="logo-icon h-6 w-6 md:h-7 md:w-7" loading="lazy" />
-          <span class="logo-wordmark text-[1.1rem] md:text-[1.25rem] font-bold tracking-[-0.03em]">DoorDash</span>
-        </div>
-        <!-- Lyft -->
-        <div class="logo-item flex items-center gap-2.5">
-          <img src="/logos/lyft.svg" alt="" class="logo-icon h-6 w-6 md:h-7 md:w-7" loading="lazy" />
-          <span class="logo-wordmark text-[1.1rem] md:text-[1.25rem] font-bold tracking-[-0.02em]">Lyft</span>
-        </div>
-        <!-- Postmates -->
-        <div class="logo-item flex items-center gap-2.5">
-          <img src="/logos/postmates.svg" alt="" class="logo-icon h-6 w-6 md:h-7 md:w-7" loading="lazy" />
-          <span class="logo-wordmark text-[1.1rem] md:text-[1.25rem] font-bold tracking-[-0.03em]">Postmates</span>
-        </div>
-        <!-- Harvey.ai -->
-        <div class="logo-item flex items-center gap-2">
-          <span class="logo-wordmark text-[1.1rem] md:text-[1.25rem] font-semibold tracking-[-0.01em]">Harvey<span class="text-[var(--gold-500)]">.</span>ai</span>
-        </div>
-        <!-- Contentful -->
-        <div class="logo-item flex items-center gap-2.5">
-          <img src="/logos/contentful.svg" alt="" class="logo-icon h-6 w-6 md:h-7 md:w-7" loading="lazy" />
-          <span class="logo-wordmark text-[1.1rem] md:text-[1.25rem] font-semibold tracking-[-0.01em]">Contentful</span>
-        </div>
-        <!-- Culture Amp -->
-        <div class="logo-item flex items-center gap-2.5">
-          <img src="/logos/cultureamp.svg" alt="" class="logo-icon h-6 w-6 md:h-7 md:w-7" loading="lazy" />
-          <span class="logo-wordmark text-[1.1rem] md:text-[1.25rem] font-semibold tracking-[-0.02em]">Culture Amp</span>
-        </div>
-        <!-- Pebl -->
-        <div class="logo-item flex items-center gap-2">
-          <span class="logo-wordmark text-[1.1rem] md:text-[1.25rem] font-semibold tracking-[-0.01em]">Pebl</span>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -517,7 +598,7 @@ const pageSchema = {
   <!-- ═══════════════════════════════════════════
        FREE AUDIT TEMPLATE — FORM-GATED DOWNLOAD
   ═══════════════════════════════════════════ -->
-  <section class="section-padding-sm border-t border-[var(--border-primary)]" style="background: var(--bg-primary);" aria-label="Free audit template download">
+  <section id="free-audit" class="section-padding border-t border-[var(--border-primary)]" style="background: var(--bg-primary);" aria-label="Free paid media audit template download">
     <div class="container-tight">
       <div class="max-w-3xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
