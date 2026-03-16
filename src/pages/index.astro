@@ -560,12 +560,9 @@ const pageSchema = {
               <form
                 name="audit-download"
                 method="POST"
-                action="/audit-thank-you"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
+                action="/.netlify/functions/audit-submit"
                 class="space-y-3"
               >
-                <input type="hidden" name="form-name" value="audit-download" />
                 <p class="hidden">
                   <label>Don't fill this out: <input name="bot-field" /></label>
                 </p>
