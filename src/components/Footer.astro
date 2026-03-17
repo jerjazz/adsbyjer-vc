@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="border-t border-[var(--border-primary)]" style="background: var(--bg-secondary);" role="contentinfo">
-  <div class="container-tight section-padding !pb-8">
+  <div class="container-tight section-padding !pb-8 !pt-16 md:!pt-20">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
       <!-- Brand -->
       <div>
@@ -33,11 +33,11 @@ const currentYear = new Date().getFullYear();
       <div>
         <h4 class="text-xs font-[Inter,sans-serif] font-semibold text-[var(--text-heading)] tracking-[0.1em] uppercase mb-4">Quick Links</h4>
         <nav class="flex flex-col gap-2" aria-label="Footer navigation">
-          <a href="#results" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-600)] dark:hover:text-[var(--gold-400)] transition-colors no-underline">Results</a>
-          <a href="#services" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-600)] dark:hover:text-[var(--gold-400)] transition-colors no-underline">Services</a>
-          <a href="#process" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-600)] dark:hover:text-[var(--gold-400)] transition-colors no-underline">Process</a>
-          <a href="#faq" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-600)] dark:hover:text-[var(--gold-400)] transition-colors no-underline">FAQ</a>
-          <a href={calLink} target="_blank" rel="noopener noreferrer" class="text-sm text-[var(--gold-600)] dark:text-[var(--gold-400)] hover:text-[var(--gold-500)] transition-colors no-underline font-medium">
+          <a href="#results" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-600)] dark:hover:text-[var(--gold-400)] transition-all no-underline hover:underline underline-offset-4 decoration-[var(--gold-500)]/30">Results</a>
+          <a href="#services" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-600)] dark:hover:text-[var(--gold-400)] transition-all no-underline hover:underline underline-offset-4 decoration-[var(--gold-500)]/30">Services</a>
+          <a href="#process" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-600)] dark:hover:text-[var(--gold-400)] transition-all no-underline hover:underline underline-offset-4 decoration-[var(--gold-500)]/30">Process</a>
+          <a href="#faq" class="text-sm text-[var(--text-secondary)] hover:text-[var(--gold-600)] dark:hover:text-[var(--gold-400)] transition-all no-underline hover:underline underline-offset-4 decoration-[var(--gold-500)]/30">FAQ</a>
+          <a href={calLink} target="_blank" rel="noopener noreferrer" class="text-sm text-[var(--gold-600)] dark:text-[var(--gold-400)] hover:text-[var(--gold-500)] transition-all no-underline font-medium hover:underline underline-offset-4">
             Book a Strategy Call &rarr;
           </a>
         </nav>

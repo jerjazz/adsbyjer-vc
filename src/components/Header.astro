@@ -12,24 +12,24 @@ const navLinks = [
 
 <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
   <div class="container-tight">
-    <nav class="flex items-center justify-between h-18 md:h-20" aria-label="Main navigation">
+    <nav class="flex items-center justify-between h-20 md:h-22" aria-label="Main navigation">
       <!-- Logo -->
       <a href="/" class="flex items-center gap-3 text-decoration-none group" aria-label="Ads by Jer Home">
         <span class="text-[var(--text-heading)] font-semibold tracking-[0.15em] text-xs uppercase font-[Inter,sans-serif] transition-colors duration-300">
           Ads by Jer
         </span>
         <span class="hidden sm:inline-block w-px h-4" style="background: var(--border-primary);"></span>
-        <span class="hidden sm:inline-block text-[var(--gold-600)] dark:text-[var(--gold-400)] text-[0.7rem] tracking-[0.08em] uppercase font-[Inter,sans-serif]">
+        <span class="hidden sm:inline-block text-[var(--gold-600)] dark:text-[var(--gold-400)] text-[0.75rem] tracking-[0.08em] uppercase font-[Inter,sans-serif]">
           Venture Capital
         </span>
       </a>
 
       <!-- Desktop Nav -->
-      <div class="hidden md:flex items-center gap-8">
+      <div class="hidden md:flex items-center gap-6">
         {navLinks.map((link) => (
           <a
             href={link.href}
-            class="text-[var(--text-secondary)] text-sm font-medium font-[Inter,sans-serif] hover:text-[var(--text-heading)] transition-colors duration-300 no-underline"
+            class="text-[var(--text-secondary)] text-sm font-medium font-[Inter,sans-serif] hover:text-[var(--gold-600)] dark:hover:text-[var(--gold-400)] transition-all duration-300 no-underline hover:underline underline-offset-4 decoration-[var(--gold-500)]/40"
           >
             {link.label}
           </a>
@@ -66,9 +66,9 @@ const navLinks = [
           class="flex flex-col gap-1.5 p-2 -mr-2 bg-transparent border-none cursor-pointer"
           aria-label="Toggle menu"
         >
-          <span class="block w-5 h-[1.5px] transition-all duration-300 origin-center" id="bar1" style="background: var(--text-body);"></span>
-          <span class="block w-5 h-[1.5px] transition-all duration-300" id="bar2" style="background: var(--text-body);"></span>
-          <span class="block w-5 h-[1.5px] transition-all duration-300 origin-center" id="bar3" style="background: var(--text-body);"></span>
+          <span class="block w-5 h-[2px] transition-all duration-300 origin-center" id="bar1" style="background: var(--text-body);"></span>
+          <span class="block w-5 h-[2px] transition-all duration-300" id="bar2" style="background: var(--text-body);"></span>
+          <span class="block w-5 h-[2px] transition-all duration-300 origin-center" id="bar3" style="background: var(--text-body);"></span>
         </button>
       </div>
     </nav>
@@ -77,7 +77,7 @@ const navLinks = [
   <!-- Mobile Menu Overlay -->
   <div
     id="mobile-menu"
-    class="md:hidden fixed inset-0 top-18 opacity-0 pointer-events-none transition-opacity duration-300 z-40"
+    class="md:hidden fixed inset-0 top-20 opacity-0 pointer-events-none transition-opacity duration-300 z-40"
     style="background-color: var(--overlay-bg); backdrop-filter: blur(20px);"
   >
     <div class="container-tight flex flex-col items-center justify-center gap-8 pt-20">

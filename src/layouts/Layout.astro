@@ -159,7 +159,7 @@ const orgSchema = {
       // ── Header scroll effect ──
       const header = document.getElementById('site-header');
       window.addEventListener('scroll', () => {
-        header?.classList.toggle('header-scrolled', window.scrollY > 40);
+        header?.classList.toggle('header-scrolled', window.scrollY > 80);
       });
 
       // ── Mobile menu ──
@@ -224,7 +224,7 @@ const orgSchema = {
         background-color: var(--overlay-bg) !important;
         backdrop-filter: blur(20px);
         border-bottom: 1px solid var(--border-primary);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
       }
     </style>
   </body>
