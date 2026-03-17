@@ -303,11 +303,11 @@ const pageSchema = {
   <!-- ═══════════════════════════════════════════
        HERO
   ═══════════════════════════════════════════ -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero">
+  <section class="relative overflow-hidden" aria-label="Hero">
     <div class="absolute inset-0 hero-grid-pattern"></div>
     <div class="absolute inset-0 hero-radial"></div>
 
-    <div class="container-tight relative z-10 text-center py-40 md:py-48">
+    <div class="container-tight relative z-10 text-center pt-32 md:pt-40 pb-12 md:pb-16">
       <div class="animate-on-scroll">
         <p class="eyebrow eyebrow-centered mb-4">Portfolio Growth Marketing</p>
         <span class="block w-12 h-px mx-auto mt-4 mb-2" style="background: linear-gradient(90deg, transparent, var(--gold-500), transparent);"></span>
@@ -335,51 +335,42 @@ const pageSchema = {
         </a>
       </div>
     </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════════
-       SOCIAL PROOF — LOGO BAR (moved above metrics for prominence)
-  ═══════════════════════════════════════════ -->
-  <section class="py-12 md:py-14 border-t border-[var(--border-primary)]" style="background: var(--bg-secondary);" aria-label="Trusted by leading companies">
-    <div class="container-tight">
-      <p class="text-center text-[0.7rem] font-medium tracking-[0.18em] uppercase mb-8 text-[var(--text-muted)] font-[Inter,sans-serif]">
-        Trusted by teams at
-      </p>
-      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-x-12 lg:gap-x-14">
-        <!-- DoorDash -->
-        <div class="logo-item flex items-center gap-2">
-          <img src="/logos/doordash.svg" alt="DoorDash logo" class="logo-icon h-5 w-5" loading="lazy" />
-          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-bold tracking-[-0.03em]">DoorDash</span>
+    <!-- Social Proof — Logo Bar (inside hero) -->
+    <div class="relative z-10 border-t border-[var(--border-primary)] pb-10 md:pb-14" style="background: transparent;">
+      <div class="container-tight pt-10 md:pt-12">
+        <div class="text-center text-[0.7rem] font-medium tracking-[0.18em] uppercase mb-8 text-[var(--text-muted)] font-[Inter,sans-serif]">
+          Trusted by teams backed by Sequoia, a16z, Kleiner Perkins & more
         </div>
-        <!-- Lyft -->
-        <div class="logo-item flex items-center gap-2">
-          <img src="/logos/lyft.svg" alt="Lyft logo" class="logo-icon h-5 w-5" loading="lazy" />
-          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-bold tracking-[-0.02em]">Lyft</span>
-        </div>
-        <!-- Postmates -->
-        <div class="logo-item flex items-center gap-2">
-          <img src="/logos/postmates.svg" alt="Postmates logo" class="logo-icon h-5 w-5" loading="lazy" />
-          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-bold tracking-[-0.03em]">Postmates</span>
-        </div>
-        <!-- Harvey.ai -->
-        <div class="logo-item flex items-center gap-2">
-          <img src="/logos/harvey.svg" alt="Harvey.ai logo" class="logo-icon h-5 w-5" loading="lazy" />
-          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.01em]">Harvey</span>
-        </div>
-        <!-- Contentful -->
-        <div class="logo-item flex items-center gap-2">
-          <img src="/logos/contentful.svg" alt="Contentful logo" class="logo-icon h-5 w-5" loading="lazy" />
-          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.01em]">Contentful</span>
-        </div>
-        <!-- Culture Amp -->
-        <div class="logo-item flex items-center gap-2">
-          <img src="/logos/cultureamp.svg" alt="Culture Amp logo" class="logo-icon h-5 w-5" loading="lazy" />
-          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.02em]">Culture Amp</span>
-        </div>
-        <!-- Pebl -->
-        <div class="logo-item flex items-center gap-2">
-          <img src="/logos/pebl.svg" alt="Pebl logo" class="logo-icon h-5 w-5" loading="lazy" />
-          <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.01em]">Pebl</span>
+        <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-x-12 lg:gap-x-14">
+          <div class="logo-item flex items-center gap-2">
+            <img src="/logos/doordash.svg" alt="DoorDash logo" class="logo-icon h-5 w-5" loading="lazy" />
+            <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-bold tracking-[-0.03em]">DoorDash</span>
+          </div>
+          <div class="logo-item flex items-center gap-2">
+            <img src="/logos/lyft.svg" alt="Lyft logo" class="logo-icon h-5 w-5" loading="lazy" />
+            <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-bold tracking-[-0.02em]">Lyft</span>
+          </div>
+          <div class="logo-item flex items-center gap-2">
+            <img src="/logos/postmates.svg" alt="Postmates logo" class="logo-icon h-5 w-5" loading="lazy" />
+            <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-bold tracking-[-0.03em]">Postmates</span>
+          </div>
+          <div class="logo-item flex items-center gap-2">
+            <img src="/logos/harvey.svg" alt="Harvey.ai logo" class="logo-icon h-5 w-5" loading="lazy" />
+            <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.01em]">Harvey</span>
+          </div>
+          <div class="logo-item flex items-center gap-2">
+            <img src="/logos/contentful.svg" alt="Contentful logo" class="logo-icon h-5 w-5" loading="lazy" />
+            <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.01em]">Contentful</span>
+          </div>
+          <div class="logo-item flex items-center gap-2">
+            <img src="/logos/cultureamp.svg" alt="Culture Amp logo" class="logo-icon h-5 w-5" loading="lazy" />
+            <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.02em]">Culture Amp</span>
+          </div>
+          <div class="logo-item flex items-center gap-2">
+            <img src="/logos/pebl.svg" alt="Pebl logo" class="logo-icon h-5 w-5" loading="lazy" />
+            <span class="logo-wordmark text-[0.95rem] md:text-[1.05rem] font-semibold tracking-[-0.01em]">Pebl</span>
+          </div>
         </div>
       </div>
     </div>
@@ -449,6 +440,18 @@ const pageSchema = {
           <a href={calLink} target="_blank" rel="noopener noreferrer" class="btn-primary mt-8 inline-flex">
             Let's Talk
           </a>
+
+          <!-- Social proof callout -->
+          <div class="mt-10 pt-8 border-t border-[var(--border-primary)]">
+            <div class="flex items-center gap-3">
+              <div class="flex -space-x-2">
+                <div class="w-8 h-8 rounded-full border-2 border-[var(--bg-secondary)] flex items-center justify-center text-[0.6rem] font-bold font-[Inter,sans-serif]" style="background: var(--gold-500); color: var(--bg-dark);">50+</div>
+              </div>
+              <p class="text-sm text-[var(--text-secondary)] leading-snug">
+                <strong class="text-[var(--text-heading)]">50+ portfolio companies</strong> scaled across B2B SaaS, DTC, and FinTech
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="space-y-5">
@@ -477,7 +480,7 @@ const pageSchema = {
   <section id="services" class="section-padding" aria-label="Services">
     <div class="container-tight">
       <div class="text-center max-w-2xl mx-auto animate-on-scroll">
-        <p class="eyebrow mb-4">What We Do</p>
+        <p class="eyebrow eyebrow-centered mb-4">What We Do</p>
         <h2 class="text-balance">
           Full-Funnel Paid Media.<br />
           <span class="gold-text">Built for Scale.</span>
@@ -503,7 +506,7 @@ const pageSchema = {
   <section id="results" class="section-padding" style="background: var(--bg-dark);" aria-label="Results and case studies">
     <div class="container-tight">
       <div class="text-center max-w-2xl mx-auto animate-on-scroll">
-        <p class="eyebrow mb-4" style="color: var(--gold-400);">Results</p>
+        <p class="eyebrow eyebrow-centered mb-4" style="color: var(--gold-400);">Results</p>
         <h2 class="text-balance" style="color: var(--text-dark-heading);">
           Numbers That Earn Board Seats
         </h2>
@@ -543,6 +546,24 @@ const pageSchema = {
           </article>
         ))}
       </div>
+
+      <!-- Social proof strip -->
+      <div class="animate-on-scroll mt-16 pt-10 border-t border-white/8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <p class="text-2xl font-bold font-[Inter,sans-serif]" style="font-variant-numeric: tabular-nums; color: var(--text-dark-heading);">100%</p>
+            <p class="text-xs uppercase tracking-wide font-medium font-[Inter,sans-serif] mt-1" style="color: var(--text-dark-muted);">Client Retention Rate (2024)</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold font-[Inter,sans-serif]" style="font-variant-numeric: tabular-nums; color: var(--text-dark-heading);">14 Days</p>
+            <p class="text-xs uppercase tracking-wide font-medium font-[Inter,sans-serif] mt-1" style="color: var(--text-dark-muted);">Avg Time to First Campaign</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold font-[Inter,sans-serif]" style="font-variant-numeric: tabular-nums; color: var(--text-dark-heading);">$30M+</p>
+            <p class="text-xs uppercase tracking-wide font-medium font-[Inter,sans-serif] mt-1" style="color: var(--text-dark-muted);">Total Ad Spend Managed</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -552,7 +573,7 @@ const pageSchema = {
   <section id="process" class="section-padding border-t border-[var(--border-primary)]" style="background: var(--bg-secondary);" aria-label="Our process">
     <div class="container-tight">
       <div class="text-center max-w-2xl mx-auto animate-on-scroll">
-        <p class="eyebrow mb-4">How It Works</p>
+        <p class="eyebrow eyebrow-centered mb-4">How It Works</p>
         <h2 class="text-balance">
           Three Steps. <span class="gold-text">Zero Waste.</span>
         </h2>
@@ -580,7 +601,7 @@ const pageSchema = {
   <section class="py-16 md:py-20" style="background: var(--bg-primary);" aria-label="Who this is for">
     <div class="container-tight">
       <div class="animate-on-scroll text-center max-w-3xl mx-auto">
-        <p class="eyebrow mb-4">Who This Is For</p>
+        <p class="eyebrow eyebrow-centered mb-4">Who This Is For</p>
         <h2 class="text-balance mb-10">
           Built for the People Who <span class="gold-text">Write the Checks</span>
         </h2>
@@ -692,7 +713,7 @@ const pageSchema = {
   <section id="faq" class="section-padding border-t border-[var(--border-primary)]" style="background: var(--bg-secondary);" aria-label="Frequently asked questions">
     <div class="container-tight">
       <div class="text-center max-w-2xl mx-auto animate-on-scroll">
-        <p class="eyebrow mb-4">FAQ</p>
+        <p class="eyebrow eyebrow-centered mb-4">FAQ</p>
         <h2 class="text-balance">
           Questions We Get from <span class="gold-text">Fund Operators</span>
         </h2>
